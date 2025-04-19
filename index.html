@@ -14,44 +14,121 @@
       line-height: 1.6;
     }
     header {
-      background: #10b981;
+      background: linear-gradient(120deg, #10b981, #059669);
       color: white;
-      padding: 3rem 2rem;
+      padding: 4rem 2rem 6rem;
       text-align: center;
+      position: relative;
+    }
+    header::after {
+      content: "";
+      background: url('https://images.unsplash.com/photo-1509099836639-18ba1795216d') center/cover no-repeat;
+      opacity: 0.15;
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    header h1, header p {
+      position: relative;
+      z-index: 1;
     }
     header h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
       margin-bottom: 0.5rem;
     }
     header p {
-      font-size: 1.2rem;
-      max-width: 600px;
+      font-size: 1.3rem;
+      max-width: 700px;
       margin: auto;
     }
     section {
-      padding: 2rem;
-      max-width: 900px;
+      padding: 3rem 2rem;
+      max-width: 1000px;
       margin: auto;
     }
     section h2 {
       color: #10b981;
+      font-size: 2rem;
+      margin-bottom: 1rem;
     }
     .images {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-      margin: 2rem 0;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin: 2.5rem 0;
     }
     .images img {
       width: 100%;
       height: auto;
       border-radius: 0.75rem;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .images img:hover {
+      transform: scale(1.03);
+    }
+    blockquote {
+      font-style: italic;
+      background: #ecfdf5;
+      border-left: 5px solid #10b981;
+      padding: 1rem 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0.5rem;
+    }
+    .roadmap {
+      background: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      margin-top: 3rem;
+    }
+    .roadmap h3 {
+      margin-bottom: 1.5rem;
+      color: #0f766e;
+      font-size: 1.6rem;
+    }
+    .roadmap ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .roadmap li {
+      margin-bottom: 1.25rem;
+      position: relative;
+      padding-left: 2rem;
+      font-size: 1.05rem;
+    }
+    .roadmap li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #10b981;
+      font-weight: bold;
     }
     footer {
       text-align: center;
       padding: 2rem;
       font-size: 0.9rem;
       color: #6b7280;
+    }
+    .cta {
+      background: #10b981;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 2rem;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+    .cta:hover {
+      background: #059669;
+    }
+    code {
+      background: #d1fae5;
+      padding: 0.2rem 0.4rem;
+      border-radius: 0.3rem;
+      font-size: 0.95rem;
     }
   </style>
 </head>
@@ -84,6 +161,20 @@
       📩 Contact us: <a href="mailto:your@email.com">your@email.com</a><br>
       💰 Support us with crypto: <code>0x1234...abcd</code>
     </p>
+    <a class="cta" href="mailto:your@email.com">Become a Supporter</a>
+
+    <div class="roadmap">
+      <h3>📍 Project Roadmap</h3>
+      <ul>
+        <li>Launch initial website and receive humanitarian support 🌍</li>
+        <li>Build partnerships with educational NGOs and tech access providers 🤝</li>
+        <li>Deliver pilot training kits (online & offline) in 3 underserved regions 🎒</li>
+        <li>Create localized mentorship networks connecting learners to real-world mentors 🌐</li>
+        <li>Develop the SkillRise app for tracking progress and sharing impact 📱</li>
+        <li>Expand into 20+ countries with infrastructure + community models 🌎</li>
+        <li>Launch SkillRise DAO to fund grassroots education efforts with transparency 🔗</li>
+      </ul>
+    </div>
   </section>
   <footer>
     &copy; 2025 SkillRise. All rights reserved.
