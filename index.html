@@ -72,6 +72,19 @@ export default function HomePage() {
           Join the Movement 🌍
         </Button>
       </motion.div>
+
+      {/* Budget Section */}
+      <motion.section
+        className="bg-white bg-opacity-80 backdrop-blur-lg rounded-3xl p-8 mt-16 max-w-4xl w-full shadow-xl z-10"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <h2 className="text-3xl font-bold text-emerald-800 text-center mb-4">Our Mission Needs Your Support 💡</h2>
+        <p className="text-gray-700 text-lg text-center">
+          To scale our global mission, visit underserved regions, provide free digital tools, education, and launch support, we are raising <span className="text-rose-600 font-bold">$200,000</span>. Your donation empowers families, builds sustainable businesses, and connects entire communities to the digital economy.
+        </p>
+      </motion.section>
     </main>
   );
 }
