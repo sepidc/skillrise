@@ -126,6 +126,20 @@ export default function HomePage() {
           </Button>
         </div>
       </motion.section>
+
+      {/* Founders Message Section */}
+      <motion.section
+        className="w-full max-w-4xl mt-20 text-center z-10"
+        initial={{ opacity: 0, y: 60 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <h2 className="text-3xl font-bold text-emerald-800 mb-4">A Message from Our Founder 💬</h2>
+        <p className="text-lg text-gray-700">
+          "Skillrise was born out of a simple belief — that everyone, regardless of where they live or what they have, deserves a chance to thrive. We're here to turn skills into opportunities and dreams into real change."
+        </p>
+        <p className="mt-4 font-semibold text-emerald-700">— The Skillrise Team</p>
+      </motion.section>
     </main>
   );
 }
