@@ -1,124 +1,92 @@
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
-import { FaGlobe, FaRocket, FaHandsHelping, FaBuilding, FaHandshake, FaUsers } from "react-icons/fa";
-
-export default function HomePage() {
-  return (
-    <main className="min-h-screen bg-white p-6 flex flex-col items-center justify-start gap-10">
-      <motion.h1
-        className="text-5xl md:text-6xl font-extrabold text-center text-emerald-700"
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        Empowering Communities Through Skills
-      </motion.h1>
-
-      <motion.p
-        className="text-xl md:text-2xl text-center max-w-3xl text-slate-700"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5, duration: 1 }}
-      >
-        Skillrise helps underserved communities learn, grow, and build businesses with free training, financial support, and global reach.
-      </motion.p>
-
-      <section className="grid md:grid-cols-3 gap-8 w-full max-w-6xl">
-        <motion.div
-          className="bg-white rounded-xl border p-6 text-center hover:shadow-md transition-all"
-          whileHover={{ scale: 1.03 }}
-        >
-          <FaGlobe size={36} className="text-indigo-500 mx-auto mb-3" />
-          <h2 className="text-xl font-semibold text-emerald-700 mb-2">Global Access</h2>
-          <p className="text-gray-700">Free online education for anyone, anywhere. All you need is internet access and the will to grow.</p>
-        </motion.div>
-
-        <motion.div
-          className="bg-white rounded-xl border p-6 text-center hover:shadow-md transition-all"
-          whileHover={{ scale: 1.03 }}
-        >
-          <FaRocket size={36} className="text-pink-500 mx-auto mb-3" />
-          <h2 className="text-xl font-semibold text-emerald-700 mb-2">Startup Support</h2>
-          <p className="text-gray-700">We offer small grants and micro-loans to help launch new ideas into sustainable businesses.</p>
-        </motion.div>
-
-        <motion.div
-          className="bg-white rounded-xl border p-6 text-center hover:shadow-md transition-all"
-          whileHover={{ scale: 1.03 }}
-        >
-          <FaHandsHelping size={36} className="text-yellow-500 mx-auto mb-3" />
-          <h2 className="text-xl font-semibold text-emerald-700 mb-2">Mentorship & Market</h2>
-          <p className="text-gray-700">Sell products on our global marketplace & learn directly from experienced mentors worldwide.</p>
-        </motion.div>
-      </section>
-
-      <motion.section
-        className="w-full max-w-6xl mt-16"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        <h2 className="text-3xl font-bold text-center text-emerald-800 mb-8">Benefits for Organizations</h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          <motion.div className="bg-white rounded-xl border p-6 text-center hover:shadow-md" whileHover={{ scale: 1.03 }}>
-            <FaBuilding size={36} className="text-indigo-600 mx-auto mb-3" />
-            <h3 className="text-lg font-semibold text-emerald-700 mb-2">CSR Impact</h3>
-            <p className="text-gray-700">Partner with Skillrise to fulfill your Corporate Social Responsibility goals and amplify your social impact.</p>
-          </motion.div>
-          <motion.div className="bg-white rounded-xl border p-6 text-center hover:shadow-md" whileHover={{ scale: 1.03 }}>
-            <FaHandshake size={36} className="text-pink-600 mx-auto mb-3" />
-            <h3 className="text-lg font-semibold text-emerald-700 mb-2">Brand Visibility</h3>
-            <p className="text-gray-700">Get recognized as a changemaker by millions across the globe who benefit from your partnership with Skillrise.</p>
-          </motion.div>
-          <motion.div className="bg-white rounded-xl border p-6 text-center hover:shadow-md" whileHover={{ scale: 1.03 }}>
-            <FaUsers size={36} className="text-yellow-600 mx-auto mb-3" />
-            <h3 className="text-lg font-semibold text-emerald-700 mb-2">Access to Talent</h3>
-            <p className="text-gray-700">Connect with a pool of skilled individuals from diverse backgrounds who are trained and ready to contribute.</p>
-          </motion.div>
-        </div>
-      </motion.section>
-
-      <motion.div
-        className="mt-10"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1, duration: 1 }}
-      >
-        <Button className="text-white bg-emerald-600 hover:bg-emerald-700 px-8 py-3 text-lg font-medium rounded-xl">
-          Join the Movement 🌍
-        </Button>
-      </motion.div>
-
-      <motion.section
-        className="bg-gray-50 border rounded-xl p-8 mt-16 max-w-4xl w-full"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        <h2 className="text-2xl font-bold text-emerald-800 text-center mb-4">Our Mission Needs Your Support 💡</h2>
-        <p className="text-gray-700 text-center">
-          To scale our global mission, provide free digital tools, education, and launch support, we are raising <span className="text-rose-600 font-bold">$200,000</span>. Your donation empowers families and builds sustainable communities.
-        </p>
-        <div className="flex justify-center mt-6">
-          <Button className="text-white bg-emerald-600 hover:bg-emerald-700 px-6 py-3 rounded-xl">
-            Donate Now ❤️
-          </Button>
-        </div>
-      </motion.section>
-
-      <motion.section
-        className="w-full max-w-4xl mt-20 text-center"
-        initial={{ opacity: 0, y: 60 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        <h2 className="text-2xl font-bold text-emerald-800 mb-4">A Message from Our Founder 💬</h2>
-        <p className="text-gray-700">
-          "Skillrise was born out of a simple belief — that everyone, regardless of where they live or what they have, deserves a chance to thrive. We're here to turn skills into opportunities and dreams into real change."
-        </p>
-        <p className="mt-4 font-semibold text-emerald-700">— The Skillrise Team</p>
-      </motion.section>
-    </main>
-  );
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillRise | Empowering Through Skills</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f3f4f6;
+      color: #111827;
+      line-height: 1.6;
+    }
+    header {
+      background: #10b981;
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: auto;
+    }
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    section h2 {
+      color: #10b981;
+    }
+    .images {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .images img {
+      width: 100%;
+      height: auto;
+      border-radius: 0.75rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to SkillRise</h1>
+    <p>Empowering Global Communities Through Skills & Action</p>
+  </header>
+  <section>
+    <h2>Our Mission</h2>
+    <p>
+      SkillRise is a global initiative committed to bridging the gap between knowledge and practical application. We believe in the transformative power of <strong>skills, education</strong>, and <strong>community support</strong>.
+    </p>
+    <p>
+      From providing clean water, internet access, and tools for self-education to supporting hands-on training and job readiness, we aim to rise together.
+    </p>
+    <blockquote>
+      We don't just teach skills — we create paths to freedom, dignity, and purpose.
+    </blockquote>
+    <div class="images">
+      <img src="https://images.unsplash.com/photo-1573497019414-cdf4f2114a1c" alt="Children learning" />
+      <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc" alt="Tech training" />
+      <img src="https://images.unsplash.com/photo-1515165562835-c4c1f3d2820d" alt="Community support" />
+    </div>
+    <h2>Join Us</h2>
+    <p>
+      Whether you're a funder, educator, volunteer, or believer in a more equitable world — we invite you to be part of this mission.
+    </p>
+    <p>
+      📩 Contact us: <a href="mailto:your@email.com">your@email.com</a><br>
+      💰 Support us with crypto: <code>0x1234...abcd</code>
+    </p>
+  </section>
+  <footer>
+    &copy; 2025 SkillRise. All rights reserved.
+  </footer>
+</body>
+</html>
