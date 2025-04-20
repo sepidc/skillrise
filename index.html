@@ -1,19 +1,28 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import { FaGlobe, FaRocket, FaHandsHelping } from "react-icons/fa";
+import { FaGlobe, FaRocket, FaHandsHelping, FaBuilding, FaHandshake, FaUsers } from "react-icons/fa";
 
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-gradient-to-r from-yellow-100 via-pink-100 to-blue-100 p-6 flex flex-col items-center justify-start gap-10 overflow-hidden relative">
-      {/* Floating Leaves Animation */}
-      <motion.div
-        initial={{ y: -100, opacity: 0 }}
-        animate={{ y: [0, 20, 0], opacity: 1 }}
-        transition={{ duration: 10, repeat: Infinity }}
-        className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none bg-[url('/leaf.svg')] bg-repeat opacity-10"
-      />
+      {/* Floating Leaves Animation Background */}
+      <div className="absolute top-0 left-0 w-full h-full z-0 overflow-hidden pointer-events-none">
+        <motion.div
+          className="absolute w-20 h-20 bg-[url('/leaf.svg')] bg-contain bg-no-repeat"
+          initial={{ y: -100, x: 0, opacity: 0 }}
+          animate={{ y: [0, 50, 0], x: [0, 10, -10, 0], opacity: 0.1 }}
+          transition={{ duration: 20, repeat: Infinity }}
+          style={{ top: '10%', left: '10%' }}
+        />
+        <motion.div
+          className="absolute w-24 h-24 bg-[url('/leaf.svg')] bg-contain bg-no-repeat"
+          initial={{ y: -120, x: 0, opacity: 0 }}
+          animate={{ y: [0, 60, 0], x: [0, -15, 15, 0], opacity: 0.1 }}
+          transition={{ duration: 25, repeat: Infinity }}
+          style={{ top: '20%', left: '70%' }}
+        />
+      </div>
 
       <motion.h1
         className="text-5xl md:text-6xl font-extrabold text-center text-emerald-700 drop-shadow-lg z-10"
@@ -61,6 +70,33 @@ export default function HomePage() {
           <p className="text-gray-700">Sell products on our global marketplace & learn directly from experienced mentors worldwide.</p>
         </motion.div>
       </section>
+
+      {/* New Section for Organizations */}
+      <motion.section
+        className="w-full max-w-6xl mt-16 z-10"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <h2 className="text-4xl font-bold text-center text-emerald-800 mb-8">Benefits for Organizations</h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          <motion.div className="bg-white rounded-2xl shadow-xl p-6 text-center hover:shadow-2xl" whileHover={{ scale: 1.05 }}>
+            <FaBuilding size={40} className="text-indigo-600 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-emerald-700 mb-2">CSR Impact</h3>
+            <p className="text-gray-700">Partner with Skillrise to fulfill your Corporate Social Responsibility goals and amplify your social impact.</p>
+          </motion.div>
+          <motion.div className="bg-white rounded-2xl shadow-xl p-6 text-center hover:shadow-2xl" whileHover={{ scale: 1.05 }}>
+            <FaHandshake size={40} className="text-pink-600 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-emerald-700 mb-2">Brand Visibility</h3>
+            <p className="text-gray-700">Get recognized as a changemaker by millions across the globe who benefit from your partnership with Skillrise.</p>
+          </motion.div>
+          <motion.div className="bg-white rounded-2xl shadow-xl p-6 text-center hover:shadow-2xl" whileHover={{ scale: 1.05 }}>
+            <FaUsers size={40} className="text-yellow-600 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-emerald-700 mb-2">Access to Talent</h3>
+            <p className="text-gray-700">Connect with a pool of skilled individuals from diverse backgrounds who are trained and ready to contribute.</p>
+          </motion.div>
+        </div>
+      </motion.section>
 
       <motion.div
         className="mt-10 z-10"
